@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Pictures using XMLHttpRequest</title>
+
+    <script type="text/javascript" src="./javascripts/index.js">
+    </script>
+</head>
+
+<body>
+<form id="form1" enctype="multipart/form-data" method="post" action="">
+    <div class="row">
+        <label for="fileToUpload">Select a Piture to Upload</label><br/>
+        <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();"/>
+    </div>
+    <ul id="father">
+        <li id="fileName"></li>
+        <li id="fileSize"></li>
+        <li id="fileType"></li>
+    </ul>
+    <div class="row">
+        <input type="button" onclick="uploadFile()" value="Upload" />
+    </div>
+    <div>Upload progress: <progress id="uploadprogress" max="100" value="0">0</progress></div>
+    <div id="progressNumber"></div>
+</form>
+
+</body>
+</html>
